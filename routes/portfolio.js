@@ -5,6 +5,8 @@ const portfolioController = require('../controllers/portfolio.controller');
 const holdingController = require('../controllers/holding.controller');
 const {addTrade, updateTrade, removeTrade}  = require('../controllers/trade.controller');
 
+const {calculateCumulativeReturn, cumulativeReturns} = require('../controllers/cumulative_return.controller');
+
 
 router.get('/', function(req, res, next) {
     portfolioController.get()
@@ -17,6 +19,13 @@ router.get('/holdings', (req, res, next) => {
         .then(response => res.json(response))
         .catch(err => res.json({success: false}));
 });
+
+router.get('/returns', (req, res, next) => {
+    cumulativeReturns()
+        .then(response => res.json(response))
+        .catch(err => res.json({success: false}));
+});
+
 
 
 function processTradeRequest(requestProcessor, req, res, next) {
