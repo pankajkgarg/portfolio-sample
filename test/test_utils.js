@@ -1,7 +1,9 @@
+const config = require('../config');
+
 const mongoose = require('mongoose');
 //tell mongoose to use es6 implementation of promises
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/test_portfolio');
+mongoose.connect(config.testDb);
 mongoose.connection
     .once('open', () => {
         console.log('Connected!');

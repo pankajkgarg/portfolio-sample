@@ -3,6 +3,8 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
+const config = require('./config');
+
 const indexRouter = require('./routes/index');
 const portfolioRouter = require('./routes/portfolio');
 
@@ -11,7 +13,7 @@ const app = express();
 
 // Set up mongoose connection
 const mongoose = require('mongoose');
-let dev_db_url = 'mongodb://127.0.0.1/portfolio';
+let dev_db_url = config.db;
 let mongoDB = process.env.MONGODB_URI || dev_db_url;
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
