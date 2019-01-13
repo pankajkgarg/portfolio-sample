@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "858ebe3a-697e-4a36-beac-497d82c356f7",
+		"name": "Portfolio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addTrade",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"trade\": {\"stockCode\": \"RELIANCE\", \"price\": \"121.5\", \"type\": \"buy\", \"quantity\": 10}}"
+				},
+				"url": {
+					"raw": "localhost:3000/portfolio/addTrade",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"portfolio",
+						"addTrade"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeTrade",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"trade\": {\"stockCode\": \"RELIANCE\", \"price\": \"121.5\", \"type\": \"buy\", \"quantity\": 10}}"
+				},
+				"url": {
+					"raw": "localhost:3000/portfolio/addTrade",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"portfolio",
+						"addTrade"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateTrade",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"trade\": {\"stockCode\": \"RELIANCE\", \"price\": \"121.5\", \"type\": \"buy\", \"quantity\": 10}}"
+				},
+				"url": {
+					"raw": "localhost:3000/portfolio/addTrade",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"portfolio",
+						"addTrade"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "portfolio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "holdings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
